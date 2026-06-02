@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* 1. THEME CONFIGURATION */
+@theme {
+  --font-playfair: var(--font-playfair);
+  --font-outfit: var(--font-outfit);
+  --font-dm-sans: var(--font-dm-sans);
+  --font-syne: var(--font-syne);
+
+  --color-brand-blue: #3563A8;
+  --color-brand-bone: #F5F2EB;
+}
+
+/* 2. BASE RESET & MOBILE HORIZONTAL SCROLL FIX */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+
+    background-color: #000000;
+  }
+
+  body {
+    @apply font-outfit text-white bg-black;
+
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: clip;
+
+    position: relative;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
+  .ppc-font {
+    font-family: var(--font-syne), sans-serif;
+  }
+
+  .btn-appointment {
+    font-family: var(--font-syne), sans-serif;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+}
+
+/* 3. UTILITIES */
+@layer utilities {
+  .font-syne {
+    font-family: var(--font-syne), sans-serif;
+  }
+
+  .shiny-text {
+    background: linear-gradient(to right,
+        #3563A8 20%,
+        #85A8D6 30%,
+        #FFFFFF 50%,
+        #85A8D6 70%,
+        #3563A8 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: shine 6s ease-in-out infinite alternate;
+    will-change: background-position;
+  }
+
+  .glass-card {
+    background: rgba(245, 242, 235, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(245, 242, 235, 0.08);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
