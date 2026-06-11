@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Calendar, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { Calendar, Sparkles, ArrowLeft } from "lucide-react";
 
 interface ServiceHeroProps {
   slug?: string;
@@ -103,6 +104,17 @@ export default function ServiceHero({ slug, title, heroTagline, shortDescription
       {/* Main Content Area */}
       <div className="relative z-20 max-w-[1400px] w-full mx-auto px-4 md:px-12 flex-grow flex items-center py-8 lg:py-0">
         <div className="max-w-3xl">
+          {/* Back Button */}
+          <div className="mb-6 md:mb-8">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-white font-outfit text-xs md:text-sm uppercase tracking-widest transition-colors group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              All Treatments
+            </Link>
+          </div>
+
           {/* Animated Glassmorphic Tagline */}
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 md:py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-4 md:mb-6 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
             <span className="w-2.5 h-2.5 rounded-full bg-[#FA5424] animate-[pulse_2s_infinite]"></span>

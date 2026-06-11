@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 1. FIX WORKSPACE WARNING
+  experimental: {
+    turbopack: {
+      root: '.',
+    },
+  },
+
   // 2. IMAGE OPTIMIZATION (Safe for Main & PPC)
   images: {
     // AVIF is much smaller than WebP and helps hit 95+ speed
@@ -14,6 +21,7 @@ const nextConfig = {
 
   // 4. PERFORMANCE & STABILITY
   reactStrictMode: true,
+  swcMinify: true, 
 };
 
 export default nextConfig;

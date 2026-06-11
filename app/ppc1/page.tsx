@@ -12,14 +12,14 @@ export default function PPC1Page() {
   return (
     <div>
       <Navbar />
-      <Hero/>
-      <About/>
-      <Treatments/>
-      <DoctorsSection/>
-      <DentalShowcase/>
-      <AwardsSection/>
-      <StaticBooking/>
-      <SimpleFooter/>
+      <Hero />
+      <About />
+      <Treatments />
+      <DoctorsSection />
+      <DentalShowcase />
+      <AwardsSection />
+      <StaticBooking />
+      <SimpleFooter />
 
     </div>
   );

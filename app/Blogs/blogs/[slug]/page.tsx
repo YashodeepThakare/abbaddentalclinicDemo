@@ -124,7 +124,7 @@ export default async function BlogPage({
 
   return (
     <>
-      <div 
+      <div
         className="relative min-h-screen selection:bg-blue-100 selection:text-blue-900"
         style={{ background: "linear-gradient(to top, #F2F0E9 0%, #F2F0E9 10%, #FFFCF8 100%)" }}
       >
@@ -179,7 +179,7 @@ export default async function BlogPage({
             <RelatedBlogs currentSlug={blog.slug} />
           </div>
         </div>
-        
+
         <Footer />
       </div>
     </>

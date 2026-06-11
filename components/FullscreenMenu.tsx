@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import Image from "next/image";
@@ -25,16 +26,13 @@ export default function FullscreenMenu({ onCloseComplete }: FullscreenMenuProps)
   const [loadMap, setLoadMap] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-  const menuItems = [
+  type MenuItem = { label: string; href: string; subItems?: { label: string; href: string }[] };
+  const menuItems: MenuItem[] = [
     { label: "Home", href: "#home" },
     { label: "About Us", href: "#about" },
-    { 
-      label: "Treatments", 
-      href: "#treatments",
-      subItems: servicesData.map(service => ({
-        label: service.title,
-        href: `/services/${service.slug}`
-      }))
+    {
+      label: "Treatments",
+      href: "/services"
     },
     { label: "Doctors", href: "#doctors" },
     { label: "Gallery", href: "#gallery" },

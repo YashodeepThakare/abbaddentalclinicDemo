@@ -11,7 +11,7 @@ import {
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FloatingIcons from "@/components/FloatingIcons";
-
+// Force recompile to clear stale Turbopack cache
 /* ---------------- Fonts ---------------- */
 
 const playfair = Playfair_Display({
